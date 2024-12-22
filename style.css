@@ -1,5 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  background-color: #ff0000;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+body header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body header h1 {
+  text-transform: capitalize;
+  margin-top: 6.901217862vh;
+  margin-bottom: 3vh;
 }/*# sourceMappingURL=style.css.map */
