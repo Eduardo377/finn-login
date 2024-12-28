@@ -31,6 +31,12 @@ header h1 {
   text-transform: capitalize;
   margin-top: 6.901217862vh;
   margin-bottom: 3vh;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+header p {
+  font-size: clamp(0.5re, 1.5rem, 2.5rem);
+  font-weight: 400;
 }
 
 main {
@@ -41,26 +47,29 @@ main {
   height: 100vh;
 }
 main section {
-  height: 100vh;
+  height: 80vh;
 }
 main section article {
   display: flex;
   justify-content: space-between;
   align-items: end;
   height: 13vh;
+  flex: 1;
 }
 main section article .ear {
   background-color: var(--secudary-color-red);
-  width: 13vw;
-  height: 6vh;
+  width: 25%;
+  height: 50%;
   border-radius: 100% 100% 0 0;
 }
 main section .bar {
   background-color: var(--secudary-color-red);
-  height: 5vh;
+  height: 7%;
+  width: 100%;
 }
 main section form {
-  height: 70vh;
+  max-height: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,23 +92,31 @@ main section form .form .form-container {
   flex-direction: column;
   background-color: var(--primary-color-skin);
   width: 80%;
-  height: 40vh;
+  height: 80%;
   border-radius: 100%;
+  position: relative;
 }
-main section form .form .form-container div {
+main section form .form .form-container .eye-container {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   background-color: var(--primary-color-skin);
   width: 40%;
-  margin-bottom: 7rem;
+  bottom: 70%;
 }
-main section form .form .form-container div .eye {
+main section form .form .form-container .eye-container .eye {
   background-color: var(--primary-color-black);
   width: 2vw;
   height: 4vh;
   border-radius: 100%;
 }
-main section form .form .form-container input {
+main section form .form .form-container .input {
+  margin-top: 22%;
+}
+main section form .form .form-container .input .input-wrapper {
+  position: relative;
+}
+main section form .form .form-container .input input {
   background-color: var(--primary-color-white);
   height: 5vh;
   width: 16vw;
@@ -108,51 +125,82 @@ main section form .form .form-container input {
   text-align: center;
   color: var(--primary-color-black);
 }
-main section form .form .form-container input:hover,
-main section form .form .form-container input:focus {
+main section form .form .form-container .input input:hover {
+  border-color: var(--secudary-color-green);
+}
+main section form .form .form-container .input input:focus {
   border-color: var(--primary-color-red);
   outline: none;
 }
-main section form .form .form-container .sweater-container {
+main section form .form .form-container .input .password-icon {
+  width: 9%;
+  height: auto;
+  z-index: 2;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+main section form .form .form-container .input .hidden {
+  display: none;
+}
+main section form .sweater-container {
   position: relative;
-  margin-top: 2rem;
-  min-width: 100%;
-  min-height: auto;
+  width: 100%;
+  height: auto;
 }
-main section form .form .form-container .sweater-container .sweater {
-  min-width: 100%;
-  min-height: auto;
-  z-index: -3;
+main section form .sweater-container .sweater {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
 }
-main section form .form .form-container .sweater-container .piece-sweater-container {
+main section form .sweater-container .piece-sweater-container {
   position: absolute;
+  top: -2rem;
+  right: 4rem;
+  width: 20%;
+  height: auto;
+  z-index: 2;
   background-color: transparent;
-  z-index: -2;
 }
-main section form .form .form-container .sweater-container .piece-sweater-container .sweater-sleeve {
+main section form .sweater-container .piece-sweater-container .sweater-sleeve {
   position: absolute;
-  top: -50%;
-  right: 10px;
+  max-width: 100%;
+  height: auto;
   background-color: transparent;
-  z-index: -1;
+  z-index: 3;
+  top: 1rem;
 }
-main section form .form .form-container .sweater-container .piece-sweater-container .sweater-sleeve-piece {
+main section form .sweater-container .piece-sweater-container .sweater-sleeve-piece {
   position: absolute;
+  top: 1rem;
+  left: 18px;
+  max-width: 80%;
+  height: auto;
   background-color: transparent;
-  z-index: 0;
+  z-index: 4;
 }
-main section form button {
+main section form .button-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 16vh;
+  padding: 3rem 0 0 0;
+}
+main section form .button-container button {
   box-shadow: 5px 5px 5px var(--primary-color-black);
   background-color: var(--primary-color-green);
-  width: 12vw;
-  height: 8vh;
+  width: 20%;
+  height: 100%;
   font-weight: 700;
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin-top: 3.2rem;
   color: var(--primary-color-white);
+  margin: 0;
 }
-main section form button:hover {
+main section form .button-container button:hover {
   background-color: var(--secudary-color-green);
   box-shadow: 0 0 10px var(--primary-color-black);
 }

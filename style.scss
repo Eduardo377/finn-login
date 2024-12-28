@@ -32,6 +32,13 @@ header {
         text-transform: capitalize;
         margin-top: 6.901217861975643vh;
         margin-bottom: 3vh;
+        font-size: clamp(1.5rem, 2.5rem, 3.5rem);
+        font-weight: 400;
+    }
+
+    p {
+        font-size: clamp(0.5re, 1.5rem, 2.5rem);
+        font-weight: 400;
     }
 }
 
@@ -42,136 +49,185 @@ main {
     flex-direction: column;
     height: 100vh;
 
-        section {
-            height: 100vh;
+    section {
+        height: 80vh;
 
-            article {
-                display: flex;
-                justify-content: space-between;
-                align-items: end;
-                height: 13vh;
-                
-                .ear {
-                    background-color: var(--secudary-color-red);
-                    width: 13vw;
-                    height: 6vh;
-                    border-radius: 100% 100% 0 0;
-                }
-            }
+        article {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            height: 13vh;
+            flex: 1;
 
-            .bar {
+
+            .ear {
                 background-color: var(--secudary-color-red);
-                height: 5vh;
+                width: 25%;
+                height: 50%;
+                border-radius: 100% 100% 0 0;
             }
+        }
 
-            form {
-                height: 70vh;
+        .bar {
+            background-color: var(--secudary-color-red);
+            height: 7%;
+            width: 100%;
+        }
+
+        form {
+            max-height: 100%;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .form {
+                background-color: var(--primary-color-white);
+                max-width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                
-                .form {
-                    background-color: var(--primary-color-white);
-                    max-width: 100%;
+                height: 50vh;
+                width: 100%;
+
+                .form-container {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
-                    height: 50vh;
-                    width: 100%;
+                    background-color: var(--primary-color-skin);
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 100%;
+                    position: relative;
 
-                    .form-container {
+                    .eye-container {
+                        position: absolute;
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
+                        justify-content: space-between;
                         background-color: var(--primary-color-skin);
-                        width: 80%;
-                        height: 40vh;
-                        border-radius: 100%;
-
-                        div {
-                            display: flex;
-                            justify-content: space-between;
-                            background-color: var(--primary-color-skin);
-                            width: 40%;
-                            margin-bottom: 7rem;
-
-                            .eye {
-                                background-color: var(--primary-color-black);
-                                width: 2vw;
-                                height: 4vh;
-                                border-radius: 100%;
-                            }
+                        width: 40%;
+                        bottom: 70%;
+                        
+                        .eye {
+                            background-color: var(--primary-color-black);
+                            width: 2vw;
+                            height: 4vh;
+                            border-radius: 100%;
                         }
+                    }
 
-                        input {
-                            background-color: var(--primary-color-white);
-                            height: 5vh;
-                            width: 16vw;
-                            border: 2px solid var(--primary-color-black);
-                            font-size: 1rem;
-                            text-align: center;
-                            color: var(--primary-color-black);
-                        }
+                    .input {
+                        margin-top: 22%;
+                        
+                        .input-wrapper {
+                        position: relative;
+                    }
+                        
+                    input {
+                        background-color: var(--primary-color-white);
+                        height: 5vh;
+                        width: 16vw;
+                        border: 2px solid var(--primary-color-black);
+                        font-size: 1rem;
+                        text-align: center;
+                        color: var(--primary-color-black);
+                    }
 
-                        input:hover,
-                        input:focus {
-                            border-color: var(--primary-color-red);
-                            outline: none;
-                        }
+                    input:hover {
+                        border-color: var(--secudary-color-green);
+                    }
+                    
+                    input:focus {
+                        border-color: var(--primary-color-red);
+                        outline: none;
+                    }
+                    
+                    .password-icon {
+                        width: 9%;
+                        height: auto;
+                        z-index: 2;
+                        position: absolute;
+                        top: 0.5rem;
+                        right: 1rem;
+                    }
 
-                        .sweater-container {
-                            position: relative;
-                            margin-top: 2rem;
-                            min-width: 100%;
-                            min-height: auto;
-                            
-                            .sweater {
-                                min-width: 100%;
-                                min-height: auto;
-                                z-index: -3;
-                            }
-                            
-                            .piece-sweater-container {
-                                position: absolute;
-                                background-color: transparent;
-                                z-index: -2;
-
-                                .sweater-sleeve {
-                                    position: absolute;
-                                    top: -50%;
-                                    right: 10px;
-                                    background-color: transparent;
-                                    z-index: -1;
-                                }
-                                
-                                .sweater-sleeve-piece {
-                                    position: absolute;
-                                    background-color: transparent;
-                                    z-index: 0;
-                                }
-                            }
+                    .hidden {
+                            display: none;
                         }
                     }
                 }
-                
-            button {
-                box-shadow: 5px 5px 5px var(--primary-color-black);
-                background-color: var(--primary-color-green);
-                width: 12vw;
-                height: 8vh;
-                font-weight: 700;
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                margin-top: 3.2rem;
-                color: var(--primary-color-white);
             }
 
-            button:hover {
-                background-color: var(--secudary-color-green);
-                box-shadow: 0 0 10px var(--primary-color-black);
+            .sweater-container {
+                position: relative;
+                width: 100%;
+                height: auto;
+
+                .sweater {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .piece-sweater-container {
+                    position: absolute;
+                    top: -2rem;
+                    right: 4rem;
+                    width: 20%;
+                    height: auto;
+                    z-index: 2;
+                    background-color: transparent;
+
+                    .sweater-sleeve {
+                        position: absolute;
+                        max-width: 100%;
+                        height: auto;
+                        background-color: transparent;
+                        z-index: 3;
+                        top: 1rem;
+                    }
+
+                    .sweater-sleeve-piece {
+                        position: absolute;
+                        top: 1rem;
+                        left: 18px;
+                        max-width: 80%;
+                        height: auto;
+                        background-color: transparent;
+                        z-index: 4;
+                    }
+                }
+            }
+
+            .button-container {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: end;
+                height: 16vh;
+                padding: 3rem 0 0 0;
+                
+                button {
+                    box-shadow: 5px 5px 5px var(--primary-color-black);
+                    background-color: var(--primary-color-green);
+                    width: 20%;
+                    height: 100%;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    color: var(--primary-color-white);
+                    margin: 0;
+                }
+                
+                button:hover {
+                    background-color: var(--secudary-color-green);
+                    box-shadow: 0 0 10px var(--primary-color-black);
+                }
             }
         }
     }
@@ -189,3 +245,10 @@ footer {
         margin-top: 1.5rem;
     }
 }
+
+// @media (max-width: 768px) {
+//     .sweater-sleeve {
+//         top: -10px;
+//         left: 5px;
+//     }
+// }
