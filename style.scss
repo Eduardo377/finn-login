@@ -307,9 +307,58 @@ footer {
     }
 }
 
-// @media (max-width: 768px) {
-//     .sweater-sleeve {
-//         top: -10px;
-//         left: 5px;
-//     }
-// }
+@media (min-width: 201) and (max-width: 768px) {
+
+    body {
+        font-size: 0.2rem;
+
+        main {
+            padding: 50rem;
+
+            section {
+
+                article {
+                    .ear {
+                        width: 20%;
+                    }
+                }
+
+                form {
+                    .form {
+                        .form-container {
+                            .eye-container {
+                                width: 50%;
+                            }
+
+                            .input {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    .sweater-container {
+                        .sweater {
+                            width: 80%;
+                        }
+
+                        .piece-sweater-container {
+
+                            .sweater-sleeve {
+                                top: -50px;
+                                left: 5px;
+                            }
+
+                            .sweater-sleeve-piece {}
+                        }
+                    }
+
+                    .button-container {
+                        button {
+                            font-size: 0.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
