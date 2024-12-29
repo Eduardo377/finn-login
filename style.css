@@ -21,10 +21,20 @@ body {
   color: var(--primary-color-white);
   z-index: -4;
 }
+body a {
+  text-decoration: none;
+  cursor: pointer;
+}
+body button {
+  cursor: pointer;
+  text-align: center;
+}
+body p {
+  text-align: center;
+}
 
 header {
   display: flex;
-  align-items: center;
   flex-direction: column;
 }
 header h1 {
@@ -33,6 +43,7 @@ header h1 {
   margin-bottom: 3vh;
   font-size: 2.5rem;
   font-weight: 400;
+  text-align: center;
 }
 header p {
   font-size: clamp(0.5re, 1.5rem, 2.5rem);
@@ -44,7 +55,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 main section {
   height: 80vh;
@@ -111,19 +122,29 @@ main section form .form .form-container .eye-container .eye {
   border-radius: 100%;
 }
 main section form .form .form-container .input {
-  margin-top: 22%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: flex-end;
+  height: 60%;
+  width: 40%;
 }
 main section form .form .form-container .input .input-wrapper {
   position: relative;
+  height: 25%;
+}
+main section form .form .form-container .input .input-wrapper input {
+  min-height: 100%;
+  min-width: 100%;
 }
 main section form .form .form-container .input input {
   background-color: var(--primary-color-white);
-  height: 5vh;
-  width: 16vw;
   border: 2px solid var(--primary-color-black);
   font-size: 1rem;
   text-align: center;
   color: var(--primary-color-black);
+  height: 25%;
+  width: 100%;
 }
 main section form .form .form-container .input input:hover {
   border-color: var(--secudary-color-green);
@@ -182,7 +203,6 @@ main section form .sweater-container .piece-sweater-container .sweater-sleeve-pi
 }
 main section form .button-container {
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -193,12 +213,11 @@ main section form .button-container button {
   box-shadow: 5px 5px 5px var(--primary-color-black);
   background-color: var(--primary-color-green);
   width: 20%;
-  height: 100%;
+  height: 80%;
   font-weight: 700;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: var(--primary-color-white);
-  margin: 0;
 }
 main section form .button-container button:hover {
   background-color: var(--secudary-color-green);
@@ -207,12 +226,43 @@ main section form .button-container button:hover {
 
 footer {
   display: flex;
+  justify-content: space-around;
+  align-items: end;
+  height: 15vh;
+  width: 100%;
+  margin-top: 9rem;
+  margin-bottom: 2rem;
+  border-top: var(--primary-color-green) solid;
+}
+footer a img {
+  width: 2rem;
+  height: 2rem;
+  transform: scale(1);
+  transition: color transform 0.3s ease-in-out;
+  color: var(--primary-color-white);
+}
+footer a img:hover {
+  color: #bbb;
+  transform: scale(1.1);
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+footer p {
+  text-transform: uppercase;
+}
+footer .footer__contact,
+footer .footer__followUS {
+  width: 50%;
+  height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 10vh;
-  margin-top: 3rem;
 }
-footer p {
-  margin-top: 1.5rem;
+footer .footer__followUS {
+  padding-top: 2rem;
+}
+footer .footer__followUS .followUS-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }/*# sourceMappingURL=style.css.map */

@@ -21,11 +21,24 @@ body {
     background-color: var(--primary-color-red);
     color: var(--primary-color-white);
     z-index: -4;
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    button {
+        cursor: pointer;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
 }
 
 header {
     display: flex;
-    align-items: center;
     flex-direction: column;
 
     h1 {
@@ -34,6 +47,7 @@ header {
         margin-bottom: 3vh;
         font-size: clamp(1.5rem, 2.5rem, 3.5rem);
         font-weight: 400;
+        text-align: center;
     }
 
     p {
@@ -47,7 +61,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 
     section {
         height: 80vh;
@@ -110,7 +124,7 @@ main {
                         background-color: var(--primary-color-skin);
                         width: 40%;
                         bottom: 70%;
-                        
+
                         .eye {
                             background-color: var(--primary-color-black);
                             width: 2vw;
@@ -120,41 +134,52 @@ main {
                     }
 
                     .input {
-                        margin-top: 22%;
-                        
+                        display: flex;
+                        flex-direction: column;
+                        align-self: center;
+                        justify-content: flex-end;
+                        height: 60%;
+                        width: 40%;
+
                         .input-wrapper {
-                        position: relative;
-                    }
-                        
-                    input {
-                        background-color: var(--primary-color-white);
-                        height: 5vh;
-                        width: 16vw;
-                        border: 2px solid var(--primary-color-black);
-                        font-size: 1rem;
-                        text-align: center;
-                        color: var(--primary-color-black);
-                    }
+                            position: relative;
+                            height: 25%;
 
-                    input:hover {
-                        border-color: var(--secudary-color-green);
-                    }
-                    
-                    input:focus {
-                        border-color: var(--primary-color-red);
-                        outline: none;
-                    }
-                    
-                    .password-icon {
-                        width: 9%;
-                        height: auto;
-                        z-index: 2;
-                        position: absolute;
-                        top: 0.5rem;
-                        right: 1rem;
-                    }
+                            input {
+                                min-height: 100%;
+                                min-width: 100%;
+                            }
+                        }
 
-                    .hidden {
+                        input {
+                            background-color: var(--primary-color-white);
+                            border: 2px solid var(--primary-color-black);
+                            font-size: 1rem;
+                            text-align: center;
+                            color: var(--primary-color-black);
+                            height: 25%;
+                            width: 100%;
+                        }
+
+                        input:hover {
+                            border-color: var(--secudary-color-green);
+                        }
+
+                        input:focus {
+                            border-color: var(--primary-color-red);
+                            outline: none;
+                        }
+
+                        .password-icon {
+                            width: 9%;
+                            height: auto;
+                            z-index: 2;
+                            position: absolute;
+                            top: 0.5rem;
+                            right: 1rem;
+                        }
+
+                        .hidden {
                             display: none;
                         }
                     }
@@ -205,25 +230,23 @@ main {
 
             .button-container {
                 width: 100%;
-                height: auto;
                 display: flex;
                 justify-content: center;
                 align-items: end;
                 height: 16vh;
                 padding: 3rem 0 0 0;
-                
+
                 button {
                     box-shadow: 5px 5px 5px var(--primary-color-black);
                     background-color: var(--primary-color-green);
                     width: 20%;
-                    height: 100%;
+                    height: 80%;
                     font-weight: 700;
                     font-size: 1.5rem;
                     text-transform: uppercase;
                     color: var(--primary-color-white);
-                    margin: 0;
                 }
-                
+
                 button:hover {
                     background-color: var(--secudary-color-green);
                     box-shadow: 0 0 10px var(--primary-color-black);
@@ -235,14 +258,52 @@ main {
 
 footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 10vh;
-    margin-top: 3rem;
+    justify-content: space-around;
+    align-items: end;
+    height: 15vh;
+    width: 100%;
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+    border-top: var(--primary-color-green) solid;
+
+    a {
+        img {
+            width: 2rem;
+            height: 2rem;
+            transform: scale(1);
+            transition: color transform 0.3s ease-in-out;
+            color: var(--primary-color-white);
+        }
+
+        img:hover {
+            color: #bbb;
+            transform: scale(1.1);
+            opacity: 0.7;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    }
 
     p {
-        margin-top: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    .footer__contact,
+    .footer__followUS {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer__followUS {
+        padding-top: 2rem;
+
+        .followUS-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
