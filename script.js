@@ -17,7 +17,6 @@ function openEyes() {
     });
 }
 
-
 function togglePasswordVisibility() {
     passwordInput.addEventListener('mouseover', () => {
         if (passwordInput.type === 'password') {
@@ -60,8 +59,27 @@ togglePassword.addEventListener('click', () => {
 //     });
 // }
 
+document.addEventListener("mousemove", (event) => {
+    const eyes = document.querySelectorAll(".eye-container");
+
+    eyes.forEach((eye) => {
+        const rect = eye.getBoundingClientRect();
+        const eyeCenterX = rect.left + rect.width / 2;
+        const eyeCenterY = rect.top + rect.height / 2;
+
+        const angle = Math.atan2(event.clientY - eyeCenterY, event.clientX - eyeCenterX);
+
+        const distance = 10;
+        const x = Math.cos(angle) * distance;
+        const y = Math.sin(angle) * distance;
+
+        eye.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+
 function createSnowflakes() {
-    const snowflakeCount = 1;
+    const snowflakeCount = 3;
     const snowflakeContainer = document.body;
 
     for (let i = 0; i < snowflakeCount; i++) {
