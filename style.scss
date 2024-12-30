@@ -177,9 +177,7 @@ main {
                             position: absolute;
                             top: 0.5rem;
                             right: 1rem;
-                        }
-
-                        .hidden {
+                            cursor: pointer;
                             display: none;
                         }
                     }
@@ -306,6 +304,27 @@ footer {
         }
     }
 }
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    background-color: var(--primary-color-white);
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+    z-index: -2;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(100vh) translateX(calc(-100vw + 200vw * random()));
+    }
+}
+
 
 @media (min-width: 201) and (max-width: 768px) {
 

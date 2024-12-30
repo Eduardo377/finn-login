@@ -160,8 +160,7 @@ main section form .form .form-container .input .password-icon {
   position: absolute;
   top: 0.5rem;
   right: 1rem;
-}
-main section form .form .form-container .input .hidden {
+  cursor: pointer;
   display: none;
 }
 main section form .sweater-container {
@@ -267,6 +266,25 @@ footer .footer__followUS .followUS-container {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.snowflake {
+  position: fixed;
+  top: -10px;
+  background-color: var(--primary-color-white);
+  border-radius: 50%;
+  opacity: 0.8;
+  pointer-events: none;
+  animation: fall 10s linear infinite;
+  z-index: -2;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(-83.0543026653vw);
+  }
+}
 @media (min-width: 201) and (max-width: 768px) {
   body {
     font-size: 0.2rem;
