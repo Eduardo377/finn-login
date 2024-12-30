@@ -3,7 +3,10 @@ const togglePassword = document.getElementById('togglePassword');
 const togglePasswordHidden = document.getElementById('togglePasswordHidden');
 const eyesClosed = document.querySelectorAll('.eye');
 
+let isEyesClosed = false;
+
 function closeEyes() {
+    isEyesClosed = true;
     eyesClosed.forEach(eye => {
         eye.classList.remove('eye');
         eye.classList.add('closed');
@@ -11,6 +14,7 @@ function closeEyes() {
 }
 
 function openEyes() {
+    isEyesClosed = false;
     eyesClosed.forEach(eye => {
         eye.classList.remove('closed');
         eye.classList.add('eye');
@@ -61,6 +65,7 @@ togglePassword.addEventListener('click', () => {
 
 document.addEventListener("mousemove", (event) => {
     const eyes = document.querySelectorAll(".eye-container");
+    if (isEyesClosed) return;
 
     eyes.forEach((eye) => {
         const rect = eye.getBoundingClientRect();
@@ -76,7 +81,6 @@ document.addEventListener("mousemove", (event) => {
         eye.style.transform = `translate(${x}px, ${y}px)`;
     });
 });
-
 
 function createSnowflakes() {
     const snowflakeCount = 3;
@@ -106,10 +110,11 @@ function createSnowflakes() {
     setTimeout(createSnowflakes, 3000);
 }
 
-window.addEventListener(
+// togglePasswordVisibilityMouseout(),
+// togglePasswordVisibilityMousedown()
+togglePasswordVisibility()
+
+document.addEventListener(
     'DOMContentLoaded',
     createSnowflakes(),
-    // togglePasswordVisibilityMouseout(),
-    // togglePasswordVisibilityMousedown()
-    togglePasswordVisibility()
 );
