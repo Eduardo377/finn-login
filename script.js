@@ -8,20 +8,6 @@ function togglePasswordVisibility() {
     });
 }
 
-
-// function togglePasswordVisibilityMouseout() {
-//     passwordInput.addEventListener('mouseout', () => {
-//         togglePassword.style.display = 'none';
-//         togglePasswordHidden.style.display = 'none';
-//     });
-// }
-
-// function togglePasswordVisibilityMousedown() {
-//     passwordInput.addEventListener('mousedown', () => {
-//         passwordInput.type === 'password' ? togglePasswordHidden.style.display = 'block' : togglePassword.style.display = 'block';
-//     });
-// }
-
 togglePasswordHidden.addEventListener('click', () => {
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
@@ -38,6 +24,20 @@ togglePassword.addEventListener('click', () => {
     }
 });
 
+// implementações futuras
+
+// function togglePasswordVisibilityMouseout() {
+//     passwordInput.addEventListener('mouseout', () => {
+//         togglePassword.style.display = 'none';
+//         togglePasswordHidden.style.display = 'none';
+//     });
+// }
+
+// function togglePasswordVisibilityMousedown() {
+//     passwordInput.addEventListener('mousedown', () => {
+//         passwordInput.type === 'password' ? togglePasswordHidden.style.display = 'block' : togglePassword.style.display = 'block';
+//     });
+// }
 
 function createSnowflakes() {
     const snowflakeCount = 1;
@@ -70,7 +70,7 @@ function createSnowflakes() {
 window.addEventListener(
     'DOMContentLoaded',
     createSnowflakes(),
-    togglePasswordVisibility()
     // togglePasswordVisibilityMouseout(),
     // togglePasswordVisibilityMousedown()
+    togglePasswordVisibility()
 );
