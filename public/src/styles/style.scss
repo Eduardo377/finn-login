@@ -38,22 +38,24 @@ body {
 }
 
 header {
-    display: flex;
-    flex-direction: column;
+    .header-container {
+        h1 {
+            text-transform: capitalize;
+            margin-top: 6.901217861975643vh;
+            margin-bottom: 3vh;
+            font-size: clamp(1.5rem, 2.5rem, 3.5rem);
+            font-weight: 400;
+            text-align: center;
+        }
 
-    h1 {
-        text-transform: capitalize;
-        margin-top: 6.901217861975643vh;
-        margin-bottom: 3vh;
-        font-size: clamp(1.5rem, 2.5rem, 3.5rem);
-        font-weight: 400;
-        text-align: center;
+        p {
+            font-size: clamp(0.5re, 1.5rem, 2.5rem);
+            font-weight: 400;
+            text-align: center;
+        }
     }
 
-    p {
-        font-size: clamp(0.5re, 1.5rem, 2.5rem);
-        font-weight: 400;
-    }
+
 }
 
 main {
