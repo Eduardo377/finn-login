@@ -121,6 +121,12 @@ main section form .form .form-container .eye-container .eye {
   height: 4vh;
   border-radius: 100%;
 }
+main section form .form .form-container .eye-container .closed {
+  height: 0.5vh;
+  width: 3vw;
+  background-color: var(--primary-color-black);
+  border-radius: 15px;
+}
 main section form .form .form-container .input {
   display: flex;
   flex-direction: column;
@@ -282,7 +288,7 @@ footer .footer__followUS .followUS-container {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(100vh) translateX(-83.0543026653vw);
+    transform: translateY(100vh) translateX(44.1659666258vw);
   }
 }
 @media (min-width: 201) and (max-width: 768px) {

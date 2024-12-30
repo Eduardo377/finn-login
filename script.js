@@ -1,10 +1,29 @@
 const passwordInput = document.getElementById('password');
 const togglePassword = document.getElementById('togglePassword');
 const togglePasswordHidden = document.getElementById('togglePasswordHidden');
+const eyesClosed = document.querySelectorAll('.eye');
+
+function closeEyes() {
+    eyesClosed.forEach(eye => {
+        eye.classList.remove('eye');
+        eye.classList.add('closed');
+    });
+}
+
+function openEyes() {
+    eyesClosed.forEach(eye => {
+        eye.classList.remove('closed');
+        eye.classList.add('eye');
+    });
+}
+
 
 function togglePasswordVisibility() {
     passwordInput.addEventListener('mouseover', () => {
-        passwordInput.type === 'password' ? togglePasswordHidden.style.display = 'block' : togglePassword.style.display = 'block';
+        if (passwordInput.type === 'password') {
+            togglePasswordHidden.style.display = 'block'
+            closeEyes();
+        }
     });
 }
 
@@ -13,6 +32,7 @@ togglePasswordHidden.addEventListener('click', () => {
         passwordInput.type = 'text';
         togglePassword.style.display = 'block';
         togglePasswordHidden.style.display = 'none';
+        openEyes();
     }
 });
 
@@ -21,6 +41,7 @@ togglePassword.addEventListener('click', () => {
         passwordInput.type = 'password';
         togglePassword.style.display = 'none';
         togglePasswordHidden.style.display = 'block';
+        closeEyes();
     }
 });
 

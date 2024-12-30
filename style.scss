@@ -131,6 +131,13 @@ main {
                             height: 4vh;
                             border-radius: 100%;
                         }
+
+                        .closed {
+                            height: 0.5vh;
+                            width: 3vw;
+                            background-color: var(--primary-color-black);
+                            border-radius: 15px;
+                        }
                     }
 
                     .input {
@@ -320,6 +327,7 @@ footer {
     0% {
         transform: translateY(0) translateX(0);
     }
+
     100% {
         transform: translateY(100vh) translateX(calc(-100vw + 200vw * random()));
     }
