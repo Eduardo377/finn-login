@@ -372,14 +372,16 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 0.5rem;
     }
 
     .footer__followUS {
         padding-top: 2rem;
-
+        
         .followUS-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            gap: 0.2rem;
         }
     }
 }
@@ -409,17 +411,11 @@ footer {
 @media (max-width: 768px) {
 
     body {
-        font-size: 0.2rem;
 
         main {
             
             section {
                 width: 80%;
-                
-                article {
-                    .ear {
-                    }
-                }
 
                 form {
                     .form {
@@ -429,21 +425,30 @@ footer {
 
                             .input {
                                 width: 50%;
+                                
+                                input {
+                                    font-size: 0.8rem;
+                                    text-align: left;
+                                    padding: 0% 0% 0% 0.2rem;
+                                }
+
+                                .input-wrapper {
+                                    img {
+                                        top: 10px;
+                                        right: 15px;
+                                    }
+                                }
                             }
                         }
                     }
 
                     .sweater-container {
-                        .sweater {
-                        }
 
                         .piece-sweater-container {
 
                             .sweater-sleeve {
                                 left: 7px;
                             }
-
-                            .sweater-sleeve-piece {}
                         }
                     }
 

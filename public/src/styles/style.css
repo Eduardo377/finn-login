@@ -326,6 +326,7 @@ footer .footer__followUS {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.5rem;
 }
 footer .footer__followUS {
   padding-top: 2rem;
@@ -333,6 +334,7 @@ footer .footer__followUS {
 footer .footer__followUS .followUS-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
 }
 
 .snowflake {
@@ -351,18 +353,24 @@ footer .footer__followUS .followUS-container {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(100vh) translateX(-87.5330285225vw);
+    transform: translateY(100vh) translateX(22.3399670454vw);
   }
 }
 @media (max-width: 768px) {
-  body {
-    font-size: 0.2rem;
-  }
   body main section {
     width: 80%;
   }
   body main section form .form .form-container .input {
     width: 50%;
+  }
+  body main section form .form .form-container .input input {
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0% 0% 0% 0.2rem;
+  }
+  body main section form .form .form-container .input .input-wrapper img {
+    top: 10px;
+    right: 15px;
   }
   body main section form .sweater-container .piece-sweater-container .sweater-sleeve {
     left: 7px;
