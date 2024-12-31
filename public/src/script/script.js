@@ -86,22 +86,19 @@ document.addEventListener("mousemove", (event) => {
 function createSnowflakes() {
     const snowflakeCount = 3;
     const snowflakeContainer = document.body;
+    const snowflakes = [];
 
     for (let i = 0; i < snowflakeCount; i++) {
         const snowflake = document.createElement('div');
-        const size = Math.random() * 5 + 5;
-        const position = Math.random() * 100;
-        const delay = Math.random() * 10;
-        const duration = Math.random() * 10 + 5;
-
         snowflake.classList.add('snowflake');
-        snowflake.style.width = `${size}px`;
-        snowflake.style.height = `${size}px`;
-        snowflake.style.left = `${position}vw`;
-        snowflake.style.animationDelay = `${delay}s`;
-        snowflake.style.animationDuration = `${duration}s`;
+        snowflake.style.width = `${Math.random() * 5 + 5}px`;
+        snowflake.style.height = `${Math.random() * 5 + 5}px`;
+        snowflake.style.left = `${Math.random() * 100}vw`;
+        snowflake.style.animationDelay = `${Math.random() * 10}s`;
+        snowflake.style.animationDuration = `${Math.random() * 10 + 5}s`;
 
         snowflakeContainer.appendChild(snowflake);
+        snowflakes.push(snowflake);
 
         snowflake.addEventListener('animationend', () => {
             snowflake.remove();
