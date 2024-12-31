@@ -117,5 +117,5 @@ togglePasswordVisibility()
 
 document.addEventListener(
     'DOMContentLoaded',
-    createSnowflakes(),
+    createSnowflakes,
 );

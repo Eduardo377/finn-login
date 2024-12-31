@@ -33,11 +33,16 @@ function updateCurrentSongDisplay() {
 }
 
 function playSong() {
-    audio.src = songs[currentIndex].url;
-    audio.play();
-    isPlaying = true;
-    playPauseImg.src = './public/assets/pause.svg';
-    updateCurrentSongDisplay();
+    try {
+        
+        audio.src = songs[currentIndex].url;
+        audio.play();
+        isPlaying = true;
+        playPauseImg.src = './public/assets/pause.svg';
+        updateCurrentSongDisplay();
+    } catch (error) {
+        console.error('Erro ao reproduzir a música:', error);
+    }
 }
 
 function pauseSong() {

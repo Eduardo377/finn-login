@@ -79,6 +79,12 @@ main {
         align-items: center;
         flex-direction: column;
 
+        label {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
         .player-container {
             display: flex;
             justify-content: center;

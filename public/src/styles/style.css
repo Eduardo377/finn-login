@@ -70,6 +70,11 @@ main #music-player {
   align-items: center;
   flex-direction: column;
 }
+main #music-player label {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
 main #music-player .player-container {
   display: flex;
   justify-content: center;
@@ -353,7 +358,7 @@ footer .footer__followUS .followUS-container {
     transform: translateY(0) translateX(0);
   }
   100% {
-    transform: translateY(100vh) translateX(22.3399670454vw);
+    transform: translateY(100vh) translateX(-62.7955237214vw);
   }
 }
 @media (max-width: 768px) {
