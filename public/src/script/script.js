@@ -3,6 +3,7 @@ const togglePassword = document.getElementById('togglePassword');
 const togglePasswordHidden = document.getElementById('togglePasswordHidden');
 const eyesClosed = document.querySelectorAll('.eye');
 
+
 let isEyesClosed = false;
 
 function closeEyes() {

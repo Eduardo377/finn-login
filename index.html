@@ -13,33 +13,44 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="shortcut icon" href="./public/assets/path/to/icons8-finn-16.png" type="image/x-icon" />
     <link rel="stylesheet" href="./public/src/styles/style.css" />
+    <link rel="stylesheet" href="./public/src/styles/song.css">
     <title>Finn</title>
 </head>
 
 <body>
     <header>
-        <div id="music-player">
-            <div>
-                <label for="volume">
-                    <input type="range" name="volume" id="volume" min="0" max="1" step="0.1" value="0.5" />
-                </label>
-            </div>
-            <button id="prev">
-    
-            </button>
-            <button id="play-pause">
-    
-            </button>
-            <button id="next">
-    
-            </button>
-        </div>
         <div class="header-container">
             <h1>bem vindos,</h1>
             <p>embarque nesta aventura, faça seu login!</p>
         </div>
     </header>
     <main>
+        <div id="music-player">
+            <div>
+                <label for="volume">
+                    <input type="range" name="volume" id="volume" min="0" max="1" step="0.1" value="0.5" />
+                </label>
+            </div>
+            <div class="player-container">
+                <button id="prev">
+                    <img src="./public/assets/prev.svg" alt="Botão para retornar música" />
+                </button>
+                <button id="play-pause">
+                    <img class="playPause" src="./public/assets/pause.svg" alt="Botão de de play na música." />
+                </button>
+                <button id="next">
+                    <img src="./public/assets/next.svg" alt="Botão para passar para próxima música." />
+                </button>
+            </div>
+            <div class="title-container">
+                <p id="current-song">
+                    Tocando: Nenhuma música
+                </p>
+                <p id="current-artist">
+                    Artista: Nenhum
+                </p>
+            </div>
+        </div>
         <section>
             <article>
                 <span class="ear"></span>
@@ -58,9 +69,9 @@
                             <div class="input-wrapper">
                                 <input type="password" id="password" name="password" placeholder="Digite sua senha"
                                     required />
-                                <img src="./public/assets/senha.png" alt="Cadeado sibolizando a proteção da senha."
+                                <img src="./public/assets/senha.webp" alt="Cadeado sibolizando a proteção da senha."
                                     class="password-icon hidden" id="togglePasswordHidden" loading="lazy" />
-                                <img src="./public/assets/mostrar-senha.png"
+                                <img src="./public/assets/mostrar-senha.webp"
                                     alt="Cadeado com olho aberto sibolizando a exibição da senha."
                                     class="password-icon hidden" id="togglePassword" loading="lazy" />
                             </div>
@@ -89,13 +100,13 @@
             <p>contact</p>
             <div>
                 <a href="https://discord.com/channels/#8875/" alt="Discord" target="_blank" rel="noopener noreferrer">
-                    <img src="./public/assets/discord.svg" alt="Discord" loading="lazy" />
+                    <img src="./public/assets/discord.webp" alt="Discord" loading="lazy" />
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=5521982646297" target="_blank" rel="noopener noreferrer">
                     <img src="./public/assets/whatsapp.webp" alt="Contato por WhatsApp" loading="lazy" />
                 </a>
                 <a href="mailto:eduardogomes377@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <img src="./public/assets/email.svg" alt="Contato por Email" loading="lazy" />
+                    <img src="./public/assets/email.webp" alt="Contato por Email" loading="lazy" />
                 </a>
             </div>
         </div>
@@ -108,14 +119,14 @@
                 </a>
                 <a href="https://github.com/Eduardo377" alt="Perfil no GitHub" target="_blank"
                     rel="noopener noreferrer">
-                    <img src="./public/assets/github.svg" alt="GitHub" loading="lazy" />
+                    <img src="./public/assets/github.webp" alt="GitHub" loading="lazy" />
                 </a>
                 <a href="https://gitlab.com/eduardo377" alt="Perfil no GitLab" target="_blank"
                     rel="noopener noreferrer">
-                    <img src="./public/assets/gitlab.svg" alt="GitLab" loading="lazy" />
+                    <img src="./public/assets/gitlab.webp" alt="GitLab" loading="lazy" />
                 </a>
                 <a href="https://codepen.io/users/eduardo377" alt="CodePen" target="_blank" rel="noopener noreferrer">
-                    <img src="./public/assets/codepen.svg" alt="CodePen" loading="lazy" />
+                    <img src="./public/assets/codepen.webp" alt="CodePen" loading="lazy" />
                 </a>
                 <a href="https://pt.stackoverflow.com/users/259231/eduardo377" alt="Stack Overflow" target="_blank"
                     rel="noopener noreferrer">
